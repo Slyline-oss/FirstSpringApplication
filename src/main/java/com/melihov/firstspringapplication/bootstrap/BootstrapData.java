@@ -25,7 +25,10 @@ public class BootstrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Publisher publisher = new Publisher("Rigas iela 1", "Riga", "Vidzeme", "LV1000");
+        Publisher publisher = new Publisher();
+        publisher.setName("SFG Publisher");
+        publisher.setCity("St Petersburg");
+        publisher.setState("FL");
         publisherRepository.save(publisher);
 
         Author eric = new Author("Eric", "Evans");
